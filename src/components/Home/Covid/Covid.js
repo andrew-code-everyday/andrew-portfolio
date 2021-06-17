@@ -32,8 +32,9 @@ const Covid = () => {
                     
                     <h2 className="title">Covid Cases {covid.country}</h2>
 
-                    <img src={covid.countryInfo.flag} alt={covid.countryInfo.iso2}></img>
-
+                    <div className="image-container">
+                        <img src={covid.countryInfo.flag} alt={covid.countryInfo.iso2} className="image-flag"></img>
+                    </div>
                 </div>
             </div>
             <div className="right">
