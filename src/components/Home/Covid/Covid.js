@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
-import AnimatedNumber from "animated-number-react";
+import CovidInfo from "./CovidInfo";
 
 const Covid = () => {
     const [covid, setCovid] = useState('');
@@ -38,14 +38,13 @@ const Covid = () => {
             </div>
             <div className="right">
                 <div className="container" data-aos="fade-up">
-                    <h3 className="info-label">Today Case: <AnimatedNumber duration={2000} formatValue={value => `${Number(value).toFixed(0)}`} value={covid.todayCases}></AnimatedNumber> </h3>
-                    <h3 className="info-label">Today Deaths: <AnimatedNumber duration={2000} formatValue={value => `${Number(value).toFixed(0)}`} value={covid.todayDeaths}></AnimatedNumber> </h3>
-                    <h3 className="info-label">Today Recovred: <AnimatedNumber duration={2000} formatValue={value => `${Number(value).toFixed(0)}`} value={covid.todayRecovered}></AnimatedNumber> </h3>
+                    <CovidInfo label="Today Case" value={covid.todayCases}/>
+                    <CovidInfo label="Today Deaths" value={covid.todayDeaths}/>
+                    <CovidInfo label="Today Recovered" value={covid.todayRecovered}/>
                 </div>          
             </div>
         </div>
     )
 }
-
 
 export default Covid;
