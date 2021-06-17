@@ -1,0 +1,100 @@
+.my-info-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    // height: 50vh;
+    .left{
+        width: 50%;
+        background-image: $background_gradient_1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .left-container{
+            padding: 5%;
+        }
+
+        .name,.experience{
+            font-family: $font_family_1;
+            color: $color_text_1;
+            font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 700;
+        }
+
+        .position{
+            font-family: $font_family_1;
+            color: $color_text_2;
+            font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+            font-weight: 700;
+            text-align: right;
+        }
+    }
+    .right{
+        width: 50%;
+        background: $color_3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .right-container{
+            padding: 5%;
+        }
+
+        .image-container{
+            width: 50%;
+            margin: auto;
+        }
+    }
+}
+
+@media (max-width:991px){
+    .my-info-container{
+        display: flex;
+        flex-direction: column;
+        
+        .left{
+            width: 100%;
+        }.right{
+            width: 100%;
+            .image-container{
+                width: 50%;
+            }
+        }
+    }
+}
+
+.covid-container{
+    padding: calc(40px + (100 - 40) * ((100vw - 320px) / (1920 - 320))) 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    .left{
+      width: 50%;
+      .title{
+          font-family: $font_family_1;
+          color: $color_1;
+          font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+          font-weight: 700;
+      }
+    }
+
+    .right{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      
+      .info-label{
+        font-family: $font_family_1;
+        color: $color_text_2;
+        font-size: calc(22px + (35 - 22) * ((100vw - 320px) / (1920 - 320)));
+      }
+
+      .info-value{
+        
+      }
+
+    }
+}
